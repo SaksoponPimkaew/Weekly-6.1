@@ -20,10 +20,12 @@ double msqrt(double x,double y) {
 int main()
 {
 	double number = 0, i, x;
+	printf("Insert Your Number: ");
 	scanf_s("%lf",&number);
+	printf("Insert Your root  : ");
 	scanf_s("%lf", &x);
-	//printf("Insert Your root : ");
-		printf("%lf", msqrt(number,x));
-		return 0;
+	printf("The Answer Is     : ");
+	printf("%lf", msqrt(number,x));
+	return 0;
 }
 
