@@ -1,20 +1,29 @@
-// Weekly 6.1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
-#include <iostream>
+#include <stdio.h>
+double msqr(double x, double y) {
+	double j = 1;
+	for (int i = y; i > 0; i--)
+	{
+		j=j*x;
+	}
+	return j;
+
+}
+double msqrt(double x,double y) {
+	double i = 0.00;
+	for ( i = 0.000000; msqr(i,y) <= x;) {
+		i += 0.0000001;
+	}
+	return i;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	double number = 0, i, x;
+	scanf_s("%lf",&number);
+	scanf_s("%lf", &x);
+	//printf("Insert Your root : ");
+		printf("%lf", msqrt(number,x));
+		return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
